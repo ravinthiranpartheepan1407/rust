@@ -45,4 +45,5 @@ fn main() {
 
     let new = ShippingBox::create_box(create.dimensions, create.weight, create.color);
     new.show();
+    new.show(); // Borrowed
 }
