@@ -19,9 +19,21 @@ fn message(gt_100: bool, lt_100: bool) {
     }
 }
 
+fn string_check(iscaps: bool, issmall: bool) {
+    match iscaps && issmall {
+        true => println!("itscaps"),
+        false => println!("itssmall"),
+    }
+}
+
 fn main() {
     let value = 100;
     let check_gt = value > 100;
     let check_lt = value < 100;
     message(check_gt, check_lt);
+
+    let data = "CAPS";
+    let check_cap_cases = "CAPS" == data;
+    let check_small_cases = "small" == data;
+    string_check(check_cap_cases, check_small_cases);
 }
